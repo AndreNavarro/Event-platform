@@ -11,6 +11,7 @@
   <a href="#-conceitos">Conceitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-future-tasks">Future Tasks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>
 </p>
 
@@ -34,7 +35,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 
 ## 💻 Projeto
-<!-- Descrição do projeto -->
+Para utilizar a *Event Platform* (Plataforma de eventos), é necessário realizar o cadastro na primeira página da aplicação para que em seguida seja redirecionado automaticamente à página das aulas, podendo escolher qual aula deseja assistir.
 
 
 ## 📚 Conceitos
@@ -46,6 +47,8 @@ Um substituto ao REST, é utilizado como padrão de consumo de APIs. O GraphQL �
 
 ### <u>GraphCMS</u>
 Como uma aplicação de armazenamento de dados sem estilização, o GraphCMS permite construir um painel de administração para os dados da aplicação a fim de ser utilizado juntamente com o GraphQL.
+
+Os dados utilizados na aplicação *Event Platform* foram salvos previamente no acesso ao GraphCMS. Qualquer alteração nos dados das aulas diretamente no no GraphCMS pode refletir na aplicação já em produção.
 
 ### <u>Apollo</u>
 É utilizado como client para o GraphQL realizando o consumo de API. Basicamente é uma aplicação que faz a ligação entre a aplicação e o GraphCMS, onde são armazenados os dados para consumo.
@@ -75,10 +78,23 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
     * Faça uma cópia do arquivo .env.sample e renomeie alterando o nome ".sample" para ".local". É necessário que sejam preenchidos os dados dentro destes arquivos.
 
   * 🖥️ **Aplicação web**  
-    * Execute ```npm install``` para carregar as dependências do projeto.
-    * Execute ```npm run dev``` para iniciar a aplicação.
+    * Execute os comandos abaixo para carregar as dependências do projeto e iniciar a aplicação:
+    
+        ```
+        npm install
+        
+        npm run dev
+        ``` 
+    
     * A aplicação estará disponível em http://localhost:3000
 
+## 🔮 Future Tasks
+
+- [ ] Corrigir carregamento das imagens em ambiente de produção
+- [ ] Não permitir que pessoas que não estejam inscritas no evento acessar a página de conteúdo
+- [ ] Utilizar login com o Github e armazenar as infos de token do github (local storage / cookies) para autenticação
+- [ ] Versão responsiva da aplicação
+- [ ] Bloquear o acesso às aulas que ainda foram lançadas
 
 ## 📝 Licença
 
